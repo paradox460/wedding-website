@@ -1,6 +1,8 @@
 class Invite < ActiveRecord::Base
   before_create :random_code
 
+  has_one :rsvp
+
   private
   def random_code
     begin
