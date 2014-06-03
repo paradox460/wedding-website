@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="259px" height="226px" viewBox="0 0 259 226" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>heart</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="story" sketch:type="MSLayerGroup" transform="translate(-431.000000, -167.000000)" fill="#314559">
+            <path d="M624.998178,167.808219 C592.246548,167.808219 560.387041,207.104466 560.387041,207.104466 C560.387041,207.104466 528.527534,167.808219 495.772336,167.808219 C463.017137,167.808219 431.75,184.187603 431.75,232.426493 C431.75,266.669753 463.912829,296.745014 463.912829,296.745014 L560.387041,392.919473 L656.861253,296.745014 C656.861253,296.745014 689.024082,266.669753 689.024082,232.426493 C689.024082,184.187603 657.756945,167.808219 624.998178,167.808219" id="Heart" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

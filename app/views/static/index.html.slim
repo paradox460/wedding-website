@@ -1,0 +1,80 @@
+doctype html
+html
+  head
+    title Sandberg–Sessions Wedding
+    = javascript_include_tag "//use.typekit.net/kdj8ujz.js"
+    javascript:
+      try{Typekit.load();}catch(e){}
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Pacifico", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag    'static', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .landing
+      .band.lightblue
+        .container
+          header#title
+            hgroup.cursive
+              h1 Jeff & Stephanie
+              h2 are getting married!
+            hgroup.serif
+              = time_tag Date.new(2014,07,12)
+              p San Francisco, California
+      .band.darkblue
+        .container
+          .ceremony
+            .icon
+            hgroup.serif
+              h1 Ceremony
+              em 2 PM
+              h2
+                a href="https://www.google.com/maps/preview#!q=Pulgas+Water+Temple&data=!1m4!1m3!1d12844!2d-122.3292264!3d37.4916603!4m15!2m14!1m13!1s0x0%3A0x35aaf9caca753a32!3m8!1m3!1d12844!2d-122.3292264!3d37.4916603!3m2!1i1440!2i779!4f13.1!4m2!3d37.4833211!4d-122.3171103" target="blank" Pulgas Water Temple
+            p.serif
+              | Our wedding ceremony is at the beautiful #{link_to "Pulgas Water Temple, on Cañada Road", "https://www.google.com/maps/preview#!q=Pulgas+Water+Temple&data=!1m4!1m3!1d12844!2d-122.3292264!3d37.4916603!4m15!2m14!1m13!1s0x0%3A0x35aaf9caca753a32!3m8!1m3!1d12844!2d-122.3292264!3d37.4916603!3m2!1i1440!2i779!4f13.1!4m2!3d37.4833211!4d-122.3171103"}
+          .reception
+            .icon
+            hgroup.serif
+              h1 Reception
+              em 3:30 PM
+              h2
+                a href="https://www.google.com/maps/preview#!q=Crystal+Springs+United+Methodist+Church%2C+Bunker+Hill+Drive%2C+San+Mateo%2C+CA&data=!4m15!2m14!1m13!1s0x808f9fcef68a814d%3A0xe969da962dec1ca4!3m8!1m3!1d12846!2d-122.3084281!3d37.4822485!3m2!1i1440!2i779!4f13.1!4m2!3d37.522215!4d-122.341754" Crystal Springs Church
+            p.serif
+              | We will be hosting a small reception in the social hall of #{link_to "Crystal Springs Methodist Church", "https://www.google.com/maps/preview#!q=Crystal+Springs+United+Methodist+Church%2C+Bunker+Hill+Drive%2C+San+Mateo%2C+CA&data=!4m15!2m14!1m13!1s0x808f9fcef68a814d%3A0xe969da962dec1ca4!3m8!1m3!1d12846!2d-122.3084281!3d37.4822485!3m2!1i1440!2i779!4f13.1!4m2!3d37.522215!4d-122.341754"}
+      .band.white
+        .container
+          .groom
+            hgroup
+              h1 The Groom
+              h2 Jeff Sandberg
+            p
+              | Jeff is the son of two geeks, and is a geek himself. He grew up in Los Alamos, NM and moved to Kennewick, WA when he was 12. During his formative middle and high school years his hobbies were playing video games with friends, surfing the web, and skiing.
+            p
+              | After high school, Jeff attended the University of Utah in Salt Lake City. He landed his first job at reddit as an undergraduate, then afterwards worked elsewhere as a ruby on rails programmer. He currently works for OneLogin, and lives in the Rincon Hill neighborhood of San Francisco.
+          .bride
+            hgroup
+              h1 The Bride
+              h2 Stephanie Sessions
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+      .band.lightblue.story
+        .container
+          h1.cursive Our Story
+          section
+            p
+              | The bride and groom first met in middle school music class. They got to know each other through band trips, events, and shared classes.
+            p
+              | After graduating from high school, both moved to Salt Lake City. Stephanie enrolled at the LDS Business College while Jeff enrolled in the University of Utah. Both being new students in a new city with a common past, they began spending more time together. Their first date was simple, a trip to a Subway to get dinner. From that point, their relationship grew.
+            p
+              | A few years later, Jeff proposed to Stephanie!
+      / footer.band.lightblue
+      /   .container.footerlinks.sans
+      /     - if user_signed_in?
+      /       = link_to "Browse Registry", gifts_path
+      /     - else
+      /       = link_to "Log in", new_user_session_path
+        .container.copyright.sans
+          | &copy; #{Time.now.year} Jeff Sandberg
+
+

@@ -1,0 +1,186 @@
+/*
+ *= require_self
+ *= require normalize
+ */
+
+$visual-grid: false
+$visual-grid-index: front
+@import 'bourbon'
+@import 'neat'
+
+@import 'partials/colors'
+@import 'partials/typography'
+
+// Breakpoints
+$phones: new-breakpoint(max-width 767px 4)
+$p-phones: new-breakpoint(max-width 767px orientation portrait 4)
+$desktop: new-breakpoint(min-width 768px)
+
+.landing
+  .band
+
+    &.lightblue
+      background: $lightblue
+      color: $white
+    &.darkblue
+      background: $darkblue
+      color: $white
+    &.white
+      background: $white
+      color: $black
+  .container
+    +outer-container
+
+  .cursive
+    font-family: $cursive
+  .serif
+    font-family: $serif
+
+  header#title
+    text-align: center
+    text-shadow: 0px 1px 3px hsla(0,0%,0%,.7)
+    h1
+      font-size: em(87)
+      margin: 0
+    h2
+      font-size: em(44)
+      margin: 0
+
+    hgroup.cursive
+      padding: em(40) 0
+
+    hgroup.serif
+      font-size: em(24)
+      margin-bottom: em(40)
+      p
+        margin: 0
+  .ceremony, .reception
+    +media($phones)
+      +omega
+      +span-columns(4)
+    +media($desktop)
+      +span-columns(4)
+    text-align: center
+    margin-top: em(30)
+
+    hgroup
+      text-shadow: 0px 1px 3px hsla(0,0%,0%,.7)
+      h1
+        display: inline-block
+        font-weight: 700
+        margin: em(10) 0 0
+        margin-right: em(10)
+      em
+        font-family: $sans
+        font-weight: 300
+        font-size: em(25)
+
+      h2
+        font-weight: 100
+        margin: em(10) 0
+        font-size: em(28)
+
+    a
+      color: inherit
+      text-decoration: inherit
+
+      &:hover
+        text-decoration: underline
+
+    p
+      font-weight: 300
+      font-size: em(20)
+
+    .icon
+      height: 226px
+      min-width: 226px
+  .ceremony
+    +media($desktop)
+      +shift(1)
+
+    .icon
+      +retina-image('rings', 226px 226px, $extension: "svg", $asset-pipeline: true, $retina-filename: 'rings')
+      background-repeat: no-repeat
+      background-position: center
+  .reception
+    +media($desktop)
+      +shift(2)
+
+    .icon
+      +retina-image('tea', 226px 226px, $extension: "svg", $asset-pipeline: true, $retina-filename: 'tea')
+      background-position: center
+      background-repeat: no-repeat
+
+  .groom, .bride
+    +media($phones)
+      +span-columns(4)
+    +media($desktop)
+      +span-columns(6)
+    hgroup
+      display: flex
+      align-items: center
+      +media($phones)
+        flex-direction: column
+    // h1, h2
+    //   display: inline-block
+    h1
+      font-family: $serif
+    h2
+      font-family: $sans
+      font-weight: 100
+      margin: 0 em(10)
+    p
+      font-family: $sans
+      +media($phones)
+        padding: 0 em(10)
+
+  .groom
+    +media($desktop)
+      text-align: right
+      hgroup
+        justify-content: flex-end
+        h1
+          order: 2
+        h2
+          order: 1
+    +media($phones)
+      border-bottom: 1px solid $grey
+  .bride
+    +media($desktop)
+      text-align: left
+
+  .band.lightblue.story
+    padding-bottom: em(40)
+    h1
+      text-align: center
+      font-size: em(48)
+      margin-bottom: em(1)
+      margin-top: 0
+      text-shadow: 0px 1px 3px hsla(0,0%,0%,.7)
+    section
+      +retina-image('heart', 260px 228px, $extension: "svg", $asset-pipeline: true, $retina-filename: 'heart')
+      background-repeat: no-repeat
+      background-position: center center
+      min-height: 228px
+      +media($desktop)
+        +span-columns(8)
+        +shift(2)
+      +media($phones)
+        +span-columns(4)
+    p
+      font-family: $sans
+      +media($phones)
+        padding: 0 em(10)
+.footerlinks
+  text-align: center
+  color: $white
+
+  a
+    color: inherit
+
+.copyright
+  text-align: center
+  color: fade-out($white,.6)
+  font-size: em(12)
+  margin: 2em 0 0
+  padding-bottom: em(30)
