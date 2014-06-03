@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 group :development do
   gem 'pry-rails'
   gem 'awesome_print'
+  gem 'letter_opener'
 end
 
 # Assets
