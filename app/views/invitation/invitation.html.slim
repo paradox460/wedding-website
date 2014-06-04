@@ -1,6 +1,8 @@
 sass:
   *
     font-family: 'helvetica neue', arial, helvetica, sans-serif
+  body
+
 
 p Hello, #{@invite.name}!
 
@@ -39,7 +41,7 @@ p Now, we need something from you. This is simple though! We need you to RSVP!
 
 p Simply visit the following URL in your browser, and fill out the form, letting us know if you can make it, or if you cant. Even if you can't, <strong>PLEASE LET US KNOW.</strong>
 
-<TEMPORARY LINK PLACEHOLDER>
+= link_to invite_view_url(@invite.code), invite_view_url(@invite.code)
 
 
 p Thanks!

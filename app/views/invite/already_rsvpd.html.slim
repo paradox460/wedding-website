@@ -1,0 +1,17 @@
+p Hey, looks like you've already sent an RSVP
+
+p
+  ' On #{@invite.rsvp.created_at.strftime('%B %-d, %Y')} you said that you were
+  - if @invite.rsvp.attending
+    em coming, and were bringing #{pluralize(@invite.rsvp.adults, 'adult')} and #{pluralize(@invite.rsvp.children, 'children')}.
+  - else
+    em not coming.
+
+p
+  ' If this isn't correct, please get in touch with us ASAP! You can call us at
+  code ***REMOVED***
+  ' or email me at #{mail_to '***REMOVED***'}
+
+p.registry If you were looking for our wedding registry, you can find it #{link_to 'here', '***REMOVED***', target: :blank}
+
+= render 'partials/details'

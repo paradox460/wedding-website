@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  resources :tests
+
   get 'static/index'
+  get 'invite/:code' => 'invite#view', as: :invite_view
+
+  post 'invite/:code/accept' => 'invite#accept', as: :accept_invite
+  post 'invite/:code/reject' => 'invite#reject', as: :reject_invite
 
   root 'static#index'
 

@@ -1,0 +1,149 @@
+@import 'bourbon'
+@import 'neat'
+
+@import 'partials/colors'
+@import 'partials/typography'
+@import 'partials/constants'
+
+$phones: new-breakpoint(max-width 767px 4)
+$p-phones: new-breakpoint(max-width 767px orientation portrait 4)
+$desktop: new-breakpoint(min-width 768px)
+
+.container
+  +outer-container
+  +media($desktop)
+    border-radius: $radius
+    margin-top: em(50)
+    border: 1px solid $darkblue
+  background-clip: padding-box
+  font-family: $sans
+  margin-bottom: em(100)
+#header
+  background: $darkblue
+  +span-columns(12)
+  +pad(em(10))
+  +media($desktop)
+    +border-top-radius($radius - 3)
+  border: 1px solid $darkblue
+  background-clip: padding-box
+
+
+  h1
+    font-family: $cursive
+    color: $white
+    margin: 0
+    text-shadow: 0px 2px 0px black
+    text-align: center
+.content
+  +span-columns(12)
+
+  h1
+    font-family: $serif
+    text-align: center
+    +span-columns(12)
+  p
+    +span-columns(8)
+    +shift(2)
+    font-size: em(18)
+
+.button
+  display: inline-block
+  padding: em(20)
+  color: white
+  border-radius: $radius
+  border: 1px solid
+  border-bottom: 3px solid
+  font-family: $sans
+  font-weight: bold
+  font-size: em(20)
+  text-shadow: 0px 2px 0px hsla(0,0%,0%,.3)
+  text-decoration: none
+
+  &:active
+    border-bottom-width: 1px
+    border-top-width: 3px
+
+.small-button
+  background: $lightblue
+  border: 1px solid $darkblue
+  border-bottom-width: 3px
+  border-radius: $radius
+  color: white
+  padding: em(5)
+  +media($phones)
+    margin-top: em(10)
+
+  &:active
+    border-bottom-width: 1px
+    border-top-width: 3px
+
+.accept-container, .reject-container
+  +media($desktop)
+    +span-columns(6)
+  +media($phones)
+    +span-columns(4)
+  text-align: center
+  +pad(em(50))
+
+.accept-container
+  .button
+    background-color: $darkgreen
+    border-color: darken($darkgreen, 20%)
+.reject-container
+  +omega
+  .button
+    background-color: $darkred
+    border-color: darken($darkred, 20%)
+
+.message
+  +media($desktop)
+    +span-columns(6)
+    +shift(3)
+    border-radius: $radius
+  +media($phones)
+    +span-columns(4)
+  +pad(em(20))
+  background: lighten($grey, 15%)
+  margin-bottom: em(20)
+
+  form
+    text-align: center
+  .input
+    display: inline-block
+    margin: 0 10px
+  label
+    display: block
+    font-size: em(14)
+    text-align: left
+    padding-left: em(5)
+
+  #{$all-text-inputs}
+    min-width: em(150)
+    height: em(35)
+    padding: 0 em(5)
+    border: 1px solid $grey
+    border-radius: $radius
+
+.hide
+  display: none
+
+.bigdetails
+  .pulgas, .reception
+    +media($desktop)
+      +span-columns(6)
+    +media($phones)
+      +span-columns(4)
+    text-align: center
+    margin-bottom: em(20)
+
+  .pulgas
+    +media($desktop)
+    border-right: 1px solid $grey
+
+  img
+    border-radius: $radius
+    background-clip: padding-box
+    margin-bottom: em(10)
+  time
+    display: inline-block
+    margin-top: em(10)

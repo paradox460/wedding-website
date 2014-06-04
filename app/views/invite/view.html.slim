@@ -1,0 +1,24 @@
+h1 Hey there, #{@invite.name}!
+
+p Thank you for RSVPing, this helps us figure out how many people we're having, so we can get the right number of chairs and whatnot for our seating arrangement.
+
+p Its pretty simple, here's what you need to do. Click one of the big friendly buttons below. If you click yes, a box will appear that you can enter how many people you're going to bring with you. Thats it!
+
+.accept-container
+  a.accepted.button I'm coming
+.reject-container
+  = link_to "I can't make it", reject_invite_path(@invite.code), method: :post, class: 'button'
+
+.message.hide
+  .accepted
+    p Great! We're glad you can make it.
+    p Please fill out these fields, so we can get an accurate head count, and then you're done!
+    = form_tag accept_invite_path(@invite.code) do |f|
+      .input
+        = label_tag 'adults'
+        = number_field_tag :adults, 1, min: 1, max: 10
+      .input
+        =label_tag 'children', 'Children (under 12)'
+        = number_field_tag :children, 0, min: 0, max: 10
+      .input
+        = submit_tag "Finish my RSVP", class: 'small-button'

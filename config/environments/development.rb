@@ -36,6 +36,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Mail
+  config.action_mailer.default_url_options = { host: "wedding.dev" }
   config.action_mailer.delivery_method = :letter_opener
   # config.action_mailer.smtp_settings = {
   #   authentication: :plain,

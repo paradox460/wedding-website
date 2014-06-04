@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603014857) do
+ActiveRecord::Schema.define(version: 20140604023308) do
 
   create_table "invites", force: true do |t|
     t.string   "name"
@@ -22,11 +22,12 @@ ActiveRecord::Schema.define(version: 20140603014857) do
   end
 
   create_table "rsvps", force: true do |t|
-    t.string   "status"
-    t.string   "number"
+    t.string   "adults"
     t.integer  "invite_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "children"
+    t.boolean  "attending"
   end
 
   add_index "rsvps", ["invite_id"], name: "index_rsvps_on_invite_id"
