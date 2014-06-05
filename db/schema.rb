@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140604023308) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "invites", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -30,6 +33,6 @@ ActiveRecord::Schema.define(version: 20140604023308) do
     t.boolean  "attending"
   end
 
-  add_index "rsvps", ["invite_id"], name: "index_rsvps_on_invite_id"
+  add_index "rsvps", ["invite_id"], name: "index_rsvps_on_invite_id", using: :btree
 
 end
