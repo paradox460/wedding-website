@@ -6,7 +6,6 @@
 @import 'partials/constants'
 
 $phones: new-breakpoint(max-width 767px 4)
-$p-phones: new-breakpoint(max-width 767px orientation portrait 4)
 $desktop: new-breakpoint(min-width 768px)
 
 .container
@@ -123,14 +122,17 @@ $desktop: new-breakpoint(min-width 768px)
     padding: 0 em(5)
     border: 1px solid $grey
     border-radius: $radius
+  .submit
+    display: block
 
 .hide
   display: none
 
 .bigdetails
+  .subheading
+    text-align: center
   .pulgas, .reception, .holiday-inn, .best-west
-    +media($desktop)
-      +span-columns(6)
+    +span-columns(6)
     +media($phones)
       +span-columns(4)
     text-align: center
@@ -144,6 +146,11 @@ $desktop: new-breakpoint(min-width 768px)
     border-radius: $radius
     background-clip: padding-box
     margin-bottom: em(10)
+    -webkit-filter: grayscale(50%)
+    transition: all 200ms ease-in
+
+    &:hover
+      -webkit-filter: grayscale(0%)
   time
     display: inline-block
     margin-top: em(10)

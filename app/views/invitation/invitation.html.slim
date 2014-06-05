@@ -8,6 +8,10 @@ p Hello, #{@invite.name}!
 
 p You may or may not have heard, but we (Jeff and Stephanie, that is) are getting married this July, and we'd love to have you there!
 
+p We need you to RSVP, to get an accurate count of who will be there. Please visit the following URL in your browser to RSVP, even if you can't make it:
+= link_to invite_view_url(@invite.code), invite_view_url(@invite.code)
+
+
 p Here's the important bits:
   
 p First off, the wedding ceremony itself!
@@ -37,7 +41,7 @@ li
   | about two and a half hours
 
 
-p Now, we need something from you. This is simple though! We need you to RSVP!
+p Please make sure you RSVP, even if you aren't able to make it.
 
 p Simply visit the following URL in your browser, and fill out the form, letting us know if you can make it, or if you cant. Even if you can't, <strong>PLEASE LET US KNOW.</strong>
 

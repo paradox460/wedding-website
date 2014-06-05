@@ -20,5 +20,5 @@ p Its pretty simple, here's what you need to do. Click one of the big friendly b
       .input
         =label_tag 'children', 'Children (under 12)'
         = number_field_tag :children, 0, min: 0, max: 10
-      .input
+      .input.submit
         = submit_tag "Finish my RSVP", class: 'small-button'
