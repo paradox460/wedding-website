@@ -14,4 +14,4 @@ p
 
 p.registry If you were looking for our wedding registry, you can find it #{link_to 'here', '***REMOVED***', target: :blank}
 
-= render 'partials/details'
+= render('partials/details') if @invite.rsvp.attending

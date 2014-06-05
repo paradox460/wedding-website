@@ -1,7 +1,7 @@
 .bigdetails
   h1 At-A-Glance information
   .pulgas
-    h1 Ceremony
+    h2 Ceremony
     = link_to image_tag('pulgasmap.png'), 'https://www.google.com/maps/preview#!q=Pulgas+Water+Temple&data=!1m4!1m3!1d12844!2d-122.3292264!3d37.4916603!4m15!2m14!1m13!1s0x0%3A0x35aaf9caca753a32!3m8!1m3!1d12844!2d-122.3292264!3d37.4916603!3m2!1i1440!2i779!4f13.1!4m2!3d37.4833211!4d-122.3171103', target: :blank
     address
       | Pulgas Water Temple <br/>
@@ -9,10 +9,34 @@
         Redwood City, CA 94062
     = time_tag Time.new(2014, 7, 12, 14, 0, 0, '-07:00'), 'July 12, 2014, 2 pm Pacific Time'
   .reception
-    h1 Reception
+    h2 Reception
     = link_to image_tag('receptionmap.png'), 'https://www.google.com/maps/preview#!q=Crystal+Springs+United+Methodist+Church%2C+Bunker+Hill+Drive%2C+San+Mateo%2C+CA&data=!4m15!2m14!1m13!1s0x808f9fcef68a814d%3A0xe969da962dec1ca4!3m8!1m3!1d12846!2d-122.3084281!3d37.4822485!3m2!1i1440!2i779!4f13.1!4m2!3d37.522215!4d-122.341754', target: :blank
     address
       | Crystal Springs United Methodist Church <br/>
         2145 Bunker Hill Dr <br/>
         San Mateo, CA 94402
     = time_tag Time.new(2014, 7, 12, 15, 30, 0, '-07:00'), 'July 12, 2014, 3:30 pm Pacific Time'
+.bigdetails
+  h1 Hotels
+  p.subheading
+    ' Mention that you're staying with the
+    em' Sandberg-Sessions Wedding Group
+    ' for a discount
+  .holiday-inn
+    h2 Holiday Inn Express
+    = link_to image_tag('holidayinnmap.png'), 'http://www.hiexstanford.com/', target: :blank
+    address
+      | Holiday Inn Express<br/>
+        1836 El Camino Real <br/>
+        Redwood City, CA 94063
+      .webpage= link_to 'http://www.hiexstanford.com/'
+      code.phone 1.877.859.5095
+  .best-west
+    h2 Best Western Plus
+    = link_to image_tag('bestwesternmap.png'), 'http://www.bestwesternrwc.com/'
+    address
+      | Best Western Plus<br/>
+        25 5th Ave<br/>
+        Redwood City, CA 94063
+    .webpage= link_to 'http://www.bestwesternrwc.com/'
+    code.phone 1.800.386.7377

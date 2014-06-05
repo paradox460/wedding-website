@@ -128,7 +128,7 @@ $desktop: new-breakpoint(min-width 768px)
   display: none
 
 .bigdetails
-  .pulgas, .reception
+  .pulgas, .reception, .holiday-inn, .best-west
     +media($desktop)
       +span-columns(6)
     +media($phones)
@@ -136,9 +136,9 @@ $desktop: new-breakpoint(min-width 768px)
     text-align: center
     margin-bottom: em(20)
 
-  .pulgas
+  .reception, .best-west
     +media($desktop)
-    border-right: 1px solid $grey
+      +omega
 
   img
     border-radius: $radius
@@ -147,3 +147,4 @@ $desktop: new-breakpoint(min-width 768px)
   time
     display: inline-block
     margin-top: em(10)
+  
