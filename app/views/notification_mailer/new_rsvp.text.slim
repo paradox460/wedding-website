@@ -1,0 +1,7 @@
+- if @rsvp.attending
+  | #{@rsvp.invite.name} just RSVP'd, and said they were coming
+    They are bringing #{pluralize(@rsvp.adults, 'adult')} and #{pluralize(@rsvp.children, 'children')}.
+    Their email address is #{@rsvp.invite.email}
+- else
+  | #{@rsvp.invite.name} just RSVP'd, and said they were not coming
+    Their email address is #{@rsvp.invite.email}
