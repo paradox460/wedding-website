@@ -16,5 +16,7 @@ html
       header#header
         h1 Sandberg-Sessions wedding
       .content
+        - if flash[:notice]
+          .flash.notice= flash[:notice]
         = yield
       .sidebar

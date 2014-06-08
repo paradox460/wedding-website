@@ -30,6 +30,11 @@ GEM
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
     awesome_print (1.2.0)
+    better_errors (1.1.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -42,6 +47,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.1.0)
     hike (1.2.3)
@@ -156,6 +162,8 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  better_errors
+  binding_of_caller
   bourbon
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)

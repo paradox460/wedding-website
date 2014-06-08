@@ -8,6 +8,14 @@
 $phones: new-breakpoint(max-width 767px 4)
 $desktop: new-breakpoint(min-width 768px)
 
++keyframes(flash)
+  0%
+    background-color:inherit
+  50%
+    background-color: lighten($lightred, 20%)
+  100%
+    background-color: inherit
+
 .container
   +outer-container
   +media($desktop)
@@ -25,7 +33,6 @@ $desktop: new-breakpoint(min-width 768px)
     +border-top-radius($radius - 3)
   border: 1px solid $darkblue
   background-clip: padding-box
-
 
   h1
     font-family: $cursive
@@ -75,6 +82,15 @@ $desktop: new-breakpoint(min-width 768px)
   &:active
     border-bottom-width: 1px
     border-top-width: 3px
+
+.flash
+  &.notice
+    background-color: $lightred
+    padding: em(10)
+    text-align: center
+    color: white
+    border-bottom: 1px solid $darkred
+    +animation(flash 500ms 250ms 3)
 
 .accept-container, .reject-container
   +media($desktop)

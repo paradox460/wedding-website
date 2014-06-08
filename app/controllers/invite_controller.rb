@@ -8,11 +8,19 @@ class InviteController < ApplicationController
 
   def accept
     @invite = Invite.where(code: params[:code]).take
-    @invite.rsvp = Rsvp.create(attending: true, adults: params[:adults], children: params[:children]) unless @invite.rsvp.exists?
+    @rsvp = Rsvp.new(attending: true, adults: params[:adults], children: params[:children]) unless @invite.rsvp.present?
+    respond_to do |format|
+      if @rsvp.save
+        @invite.rsvp = @rsvp
+        format.html {render :accept }
+      else
+        format.html { redirect_to invite_view_path(@invite.code, anchor: 'accept'), notice: 'Adults/Children must be numbers' }
+      end
+    end
   end
 
   def reject
     @invite = Invite.where(code: params[:code]).take
-    @invite.rsvp = Rsvp.create(attending: false) unless @invite.rsvp.exists?
+    @invite.rsvp = Rsvp.create(attending: false) unless @invite.rsvp.present?
   end
 end
