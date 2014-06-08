@@ -75,6 +75,13 @@ html
       /       = link_to "Browse Registry", gifts_path
       /     - else
       /       = link_to "Log in", new_user_session_path
+      .band.darkblue.registry
+        .container
+          h1.cursive Reception and RSVP
+          section
+            p We have a wedding registry online, hosted through Amazon.com
+            = link_to 'Amazon.com Registry', '***REMOVED***', class: 'registrylink'
+            p.rsvp If you would like to RSVP, and have not received instructions on how to do so, please give me a call or email, at ***REMOVED*** or #{mail_to '***REMOVED***'}
         .container.copyright.sans
           | &copy; #{Time.now.year} Jeff Sandberg
 

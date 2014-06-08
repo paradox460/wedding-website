@@ -107,7 +107,7 @@ $desktop: new-breakpoint(min-width 768px)
       +shift(2)
 
     .icon
-      +retina-image('tea', 226px 226px, $extension: "svg", $asset-pipeline: true, $retina-filename: 'tea')
+      +retina-image('reception', 226px 226px, $extension: "svg", $asset-pipeline: true, $retina-filename: 'reception')
       background-position: center
       background-repeat: no-repeat
 
@@ -171,6 +171,29 @@ $desktop: new-breakpoint(min-width 768px)
       font-family: $sans
       +media($phones)
         padding: 0 em(10)
+
+.registry
+  text-align: center
+  
+  h1
+    margin-top: 0
+    padding-top: em(10)
+  section
+    +media($desktop)
+      +span-columns(6)
+      +shift(3)
+    +media($phones)
+      +span-columns(4)
+  .registrylink
+    display: inline-block
+    +hide-text
+    +size(439px 86px)
+    +retina-image('amazon',439px 86px, $asset-pipeline: true)
+    background-repeat: no-repeat
+  .rsvp
+    margin-top: em(50)
+    a
+      color: $white
 .footerlinks
   text-align: center
   color: $white
