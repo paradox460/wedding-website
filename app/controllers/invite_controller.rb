@@ -20,6 +20,7 @@ class InviteController < ApplicationController
 
   def reject
     @invite = Invite.where(code: params[:code]).take
-    @invite.rsvp = Rsvp.create(attending: false) unless @invite.rsvp.present?
+    @rsvp = Rsvp.new(attending: false) unless @invite.rsvp.present?
+    @invite.rsvp = @rsvp
   end
 end
