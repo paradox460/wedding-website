@@ -27,6 +27,7 @@ gem 'spring',        group: :development
 
 gem 'pry-rails'
 gem 'awesome_print'
+gem 'hirb'
 
 group :development do
   gem 'letter_opener'
@@ -58,4 +59,4 @@ gem 'slim-rails'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-ruby "2.1.2"
+ruby '2.1.2'
