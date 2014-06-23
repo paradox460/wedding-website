@@ -40,7 +40,10 @@ $desktop: new-breakpoint(min-width 768px)
     text-align: center
     text-shadow: 0px 1px 3px hsla(0,0%,0%,.7)
     h1
-      font-size: em(87)
+      +media($desktop)
+        font-size: em(87)
+      +media($phones)
+        font-size: em(80)
       margin: 0
     h2
       font-size: em(44)
@@ -184,11 +187,18 @@ $desktop: new-breakpoint(min-width 768px)
       +shift(3)
     +media($phones)
       +span-columns(4)
+  p
+    +media($phones)
+      padding: 0 em(10)
   .registrylink
     display: inline-block
     +hide-text
-    +size(439px 86px)
-    +retina-image('amazon',439px 86px, $asset-pipeline: true)
+    +media($desktop)
+      +size(439px 86px)
+      +retina-image('amazon',439px 86px, $asset-pipeline: true)
+    +media($phones)
+      +size(219px 43px)
+      +retina-image('amazon',219px 43px, $asset-pipeline: true)
     background-repeat: no-repeat
   .rsvp
     margin-top: em(50)
